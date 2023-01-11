@@ -272,7 +272,7 @@ void quickSort(int left, int right,pair<double,string> arr[])
 	int i, j;
 	pair<double,string> temp, base;
 	i = left, j = right;
-	base = arr[left];  //取最左边的数为基准数
+	base = arr[left]; 
 	while (i < j)
 	{
 		while (arr[j].first >= base.first && i < j)
@@ -286,12 +286,10 @@ void quickSort(int left, int right,pair<double,string> arr[])
 			arr[j] = temp;
 		}
 	}
-	//基准数归位
+
 	arr[left] = arr[i];
 	arr[i] = base;
-	//递归左边
 	quickSort(left, i - 1, arr);
-	//递归右边
 	quickSort(i + 1, right, arr);
 }
 
@@ -361,7 +359,7 @@ void oddEvenSort(pair<double,string> arr[], int l, int r)
             #pragma omp for nowait schedule(dynamic, 64)
             for (i = 1+l; i <= r-1; i = i+2)
             {
-                //printf("线程ID%d\n",omp_get_thread_num());
+                //printf("锟竭筹拷ID%d\n",omp_get_thread_num());
                 if (p[i].first > p[i+1].first)
                 {
                     pair<double,string> temp = p[i];

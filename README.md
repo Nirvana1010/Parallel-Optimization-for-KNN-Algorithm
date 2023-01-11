@@ -1,4 +1,4 @@
-# Parallel-Optimization-for-KNN-Algorithm
+# Parallel Optimization for KNN Algorithm
 
 **Language:** C++
 
